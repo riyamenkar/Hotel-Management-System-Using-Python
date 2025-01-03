@@ -1,0 +1,32 @@
+#Define the menu
+menu={
+    "Pizza": 40,
+    "Pasta": 50,
+    "Coffee": 60,
+    "Salad": 100
+}
+#greet
+print("Welcome to my Restaurent")
+print("Pizza: Rs.40\nPasta: Rs.50\nCoffee: Rs.60\nSalad:Rs.100")
+
+order_total=0
+item_1=input("what you want to order= ")
+if item_1 in menu:
+       order_total += menu[item_1]
+       print("the item has been added to cart")
+else: 
+       print(f"the item {item_1} which you have added is not in the menu")
+
+another_order=input("Do you want to add another item in your cart? (Yes/No)")
+if another_order =="Yes":
+   item_2=input(("Add another item in the cart= "))
+   if item_2 in menu:
+       order_total += menu[item_2]
+       print(f"item {item_2} has been added to cart")
+      
+   else:
+       print(f"the item {item_2} is not present in menu")
+
+
+print(f"the total amount is {order_total}")
+
